@@ -32,8 +32,8 @@
 
                 <!-- slider immagine principale-->
                 <div class="gallery">
-                    <div v-for=“image in images” :key=“image.id”>
-                        <img :src=“image.url” alt=“Immagine”>
+                    <div v-for="image in images" :key="image.id">
+                        <img :src="image.url" alt="Immagine">
                     </div>
                     <!-- bottone giu'-->
                     <button class="border-round next" id="prev">
@@ -42,8 +42,8 @@
                 </div>
                 <!-- thumbnails-->
                 <div id="thumbnails">
-                    <div v-for=“image in images” id=“thumbnails”>
-                        <img :src=“image.url” alt=“image.text”>
+                    <div v-for="image in images" id="thumbnails">
+                        <img :src="image.url" alt="image.text">
                     </div>
                 </div>
             </div>
