@@ -35,19 +35,19 @@
                     <div v-for=“image in images” :key=“image.id”>
                         <img :src=“image.url” alt=“Immagine”>
                     </div>
-                <!-- bottone giu'-->
-                <button class="border-round next" id="prev">
-                    <i class="fas fa-angle-down"></i>
-                </button>
-            </div>
-            <!-- thumbnails-->
-            <div id="thumbnails">
-                <div v-for=“image in images” id=“thumbnails”>
-                    <img :src=“image.image” alt=“image.text”>
+                    <!-- bottone giu'-->
+                    <button class="border-round next" id="prev">
+                        <i class="fas fa-angle-down"></i>
+                    </button>
+                </div>
+                <!-- thumbnails-->
+                <div id="thumbnails">
+                    <div v-for=“image in images” id=“thumbnails”>
+                    <img :src=“image.image” alt=“image.text”></div>
+                </div>
             </div>
         </div>
-    </div>
-    <script src="main.js"></script>
+        <script src="main.js"></script>
 </body>
 
 </html>
