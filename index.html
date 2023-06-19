@@ -32,7 +32,7 @@
 
                 <!-- slider immagine principale-->
                 <div class="gallery">
-                    <img :src="image in images"  alt="comicsandgames" class="active">
+                    <img :src="image of images" :src=“image.image” alt="comicsandgames" class="active">
                 </div>
                 <!-- bottone giu'-->
                 <button class="border-round next" id="prev">
@@ -41,7 +41,7 @@
             </div>
             <!-- thumbnails-->
             <div id="thumbnails">
-                <img :src="image in images" :src="pic.url" alt="comicsandgames" class="">
+                <img :src="image of images" :src=“image.image” alt="comicsandgames" class="">
 
             </div>
         </div>
