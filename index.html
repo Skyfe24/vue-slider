@@ -32,8 +32,9 @@
 
                 <!-- slider immagine principale-->
                 <div class="gallery">
-                    <img :src="image of images" :src=“image.image” alt="comicsandgames" class="active">
-                </div>
+                    <div v-for=“image in images” :key=“image.id”>
+                        <img :src=“image.url” alt=“Immagine”>
+                    </div>
                 <!-- bottone giu'-->
                 <button class="border-round next" id="prev">
                     <i class="fas fa-angle-down"></i>
@@ -41,8 +42,8 @@
             </div>
             <!-- thumbnails-->
             <div id="thumbnails">
-                <img :src="image of images" :src=“image.image” alt="comicsandgames" class="">
-
+                <div v-for=“image in images” id=“thumbnails”>
+                    <img :src=“image.image” alt=“image.text”>
             </div>
         </div>
     </div>
