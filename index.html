@@ -26,24 +26,24 @@
         <div id="Slider" class="slider">
             <div class="arrows">
                 <!-- bottone su-->
-                <button class="border-round prev">
+                <button class="border-round prev" @click="goPrev()">
                     <i class="fas fa-angle-up"></i>
                 </button>
 
                 <!-- slider immagine principale-->
                 <div class="gallery">
-                    <div v-for="image in images" :key="image.id">
-                        <img :src="image.url" alt="Immagine">
+                    <figure v-for="(image, i) in images" v-show= "CurrentIndex === i">
+                        <img :src="image.url" alt="image.title" class="active">
                     </div>
                     <!-- bottone giu'-->
-                    <button class="border-round next" id="prev">
+                    <button class="border-round next" id="prev"  @click="goNext()">
                         <i class="fas fa-angle-down"></i>
                     </button>
                 </div>
                 <!-- thumbnails-->
                 <div id="thumbnails">
                     <div v-for="image in images" id="thumbnails">
-                        <img :src="image.url" alt="image.text">
+                        <img :src="image.url" alt="image.text" class=" flex">
                     </div>
                 </div>
             </div>
