@@ -30,15 +30,29 @@ const app = Vue.createApp({
     },
     
     goNext(){
-      this.CurrentIndex++
+      this.CurrentIndex++;
+      if(this.isLast)
+      {this.CurrentIndex = 0}
 
     },
     goPrev(){
-      this.CurrentIndex--
+      if(this.isFirst){
+        this.CurrentIndex = this.images.length
+      }
+      this.CurrentIndex--;
 
     }
-  }
+  },
 
+  computed:{
+    isLast(){
+      return this.CurrentIndex === this.images.length;
+    },
+
+    isFirst(){
+      return this.CurrentIndex === 0;
+    },
+  }
 });
 app.mount("#root");
 
